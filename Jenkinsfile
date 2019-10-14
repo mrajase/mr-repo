@@ -11,9 +11,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		echo “Multiline shell steps works too”
+		echo 'ultiline shell steps works too'
 		sh '
-			ls -lah
+			ls -lah  \
 			date
 		'
             }

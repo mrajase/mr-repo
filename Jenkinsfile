@@ -13,7 +13,7 @@ pipeline {
                 echo 'Testing..'
 		sh '''    echo "Multiline test" 
 		ls -lah  
-		date
+		/bin/date
 		'''
             }
         }

@@ -11,8 +11,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		sh '    echo "Multiline test" '
-		sh 'ls -lah  '
+		sh '''    echo "Multiline test" 
+		ls -lah  
+		date
+		'''
             }
         }
         stage('Deploy') {

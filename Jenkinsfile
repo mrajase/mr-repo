@@ -11,7 +11,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-		sh 'ls -lah'
+		sh '
+			echo “Multiline shell steps works too”
+			ls -lah
+		'
             }
         }
         stage('Deploy') {

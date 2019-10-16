@@ -10,7 +10,7 @@ pipeline {
 
       stage('Upload to AWS') {
         steps {
-          withAWS(region:'us-west-2',credentials:'mr-user') {
+          withAWS(region:'us-west-1',credentials:'mr-user') {
             s3Upload(pathStyleAccessEnabled:true, payloadSigningEnabled: true, file:'index.html', bucket:'mr-cicd')
           }
         }
